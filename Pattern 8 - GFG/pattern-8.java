@@ -20,24 +20,20 @@ class Main {
 class Solution {
 
     void printTriangle(int n) {
-        // code here
-        
-        for(int i = n-1; i>=0 ; i--){
+       
+       
+        for(int i = n-1 ; i >= 0 ; i--){
             
-            int toc = 2*i+1;
-            int soc = n+i-toc;
             
-            for(int j=0; j< soc; j++)
+            int toc = 2 * i + 1;
+            int soc = n + i - toc;
+            
+            for(int j = 0 ; j < soc ; j++)
                 System.out.print(" ");
-                
-            for(int j=0; j< toc ; j++ )
+            for(int k = 0 ; k < toc ; k++)
                 System.out.print("*");
-                
-           System.out.println();
             
-            
-            
-            
+            System.out.println();
         }
         
         
