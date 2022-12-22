@@ -23,30 +23,44 @@ class Solution {
     void printSquare(int n) {
         // code here
         
-        for(int i = 1; i<=n; i++){
+       int size = 2 * n - 1;
+       
+       int[][] mat = new int[size][size];
+       
+       int top = 0;
+       int bottom = 2 * n - 2;
+       int left = 0;
+       int right = 2 * n -2;
+       
+       while(n > 0){
+           
+            for(int i = left ; i<=right ; i++)
+                mat[top][i] = n;
+            top++;
+            for(int i = top ; i<=bottom ; i++)
+                mat[i][right] = n;
+            right--;
+            for(int i = right; i>=left ; i--)
+                mat[bottom][i] = n;
+            bottom--;
+            for(int i = bottom ;i>=top;i--)
+                mat[i][left] = n;
+            left++;
             
-            if(i==1 || i==n){
-                for(int j=0; j<n;j++)
-                    System.out.print("*");
-            }
-            else{
-                
-                for(int j = 1; j<=n; j++){
-                    
-                    if(j==1 || j==n)
-                        System.out.print("*");
-                    else
-                        System.out.print(" ");
-                    
-                }
-            }
-            
-            
-           System.out.println();
-            
-            
-        }
-        
-        
+            n--;
+       }
+       
+       for(int i = 0 ; i<size; i++){
+           
+           for(int j=0; j<size; j++){
+               System.out.print(mat[i][j]+" ");
+           }
+             System.out.println();
+           
+       }
+       
+       
+       
+           
     }
 }
