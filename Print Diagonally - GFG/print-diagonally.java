@@ -22,7 +22,7 @@ class GFG
                  matrix[i][j] = sc.nextInt();
             }
             Solution ob = new Solution();
-            ArrayList<Integer> ans = ob.downwardDigonal(n, matrix);
+            ArrayList<Integer> ans = ob.downwardDiagonal(n, matrix);
             for (Integer val: ans) 
                 System.out.print(val+" "); 
             System.out.println();
@@ -35,25 +35,28 @@ class GFG
 //User function Template for Java
 
 class Solution{
-    static ArrayList<Integer> downwardDigonal(int N, int A[][])
+    static ArrayList<Integer> downwardDiagonal(int N, int A[][])
     {
         // code here 
         ArrayList<Integer> list = new ArrayList<>();
         
-        for(int k = 0 ; k<N ; k++){
+        // Zone 1 from 1th row in array and row is fixed; 
+        
+        for(int k = 0 ; k<N; k++){
             
-            int row = 0;
+            int row = 0; 
             int col = k;
+            
             while(col >=0){
                 list.add(A[row][col]);
                 row++;
                 col--;
             }
-            
         }
         
-        
-        for(int k = 1; k < N ; k++){
+        // Zone 2 starting from the second row from array and column is fixed
+                
+        for(int k=1; k<N; k++){
             
             int row = k;
             int col = N-1;
@@ -64,9 +67,10 @@ class Solution{
                 col--;
             }
             
+            
         }
         
-        
         return list;
+        
     }
 }
