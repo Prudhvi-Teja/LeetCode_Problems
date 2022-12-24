@@ -33,7 +33,7 @@ the order {1, 2, 4, 3, 5, 7, 6, 8, 9}.
 </pre>
 
 <p><span style="font-size:18px"><strong>Your Task:</strong><br>
-You don't need to read input or print anything. Your task is to complete the function <strong>downwardDigonal()</strong> which takes an integer <strong>N</strong> and a 2D matrix <strong>A[ ][ ]</strong> as input parameters and returns the list of all elements of its anti-diagonals from <strong>top to bottom</strong>.</span></p>
+You don't need to read input or print anything. Your task is to complete the function <strong>downwardDiagonal()</strong> which takes an integer <strong>N</strong> and a 2D matrix <strong>A[ ][ ]</strong> as input parameters and returns the list of all elements of its anti-diagonals from <strong>top to bottom</strong>.</span></p>
 
 <p><span style="font-size:18px"><strong>Expected Time Complexity:&nbsp;</strong>O(N*N)<br>
 <strong>Expected Auxillary Space:&nbsp;</strong>O(N*N)</span></p>
