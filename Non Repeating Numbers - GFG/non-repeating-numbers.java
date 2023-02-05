@@ -44,7 +44,7 @@ class Solution
         for(int num : nums){
             ans ^= num;
         }
-        ans = ans & (-ans);
+        ans = ans & ~(ans-1);
         int temp1=0,temp2=0;
         for(int num : nums){
             
