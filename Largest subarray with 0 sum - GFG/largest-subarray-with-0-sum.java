@@ -32,27 +32,27 @@ class GfG
     int maxLen(int arr[], int n)
     {
         // Your code here
-        HashMap<Integer,Integer> map = new HashMap<>();
-        int ans = 0;
-        int sum = 0;
-        map.put(0,-1);
-        for(int i =0 ; i < n; i++){
+       HashMap<Integer,Integer> map = new HashMap<>();
+       int ans = 0;
+       int sum =0;
+       
+       for(int i =0 ; i < n ; i++){
+           
+           sum += arr[i];
+           
+           if(sum==0)
+                ans = i+1;
+                
+            Integer val = map.get(sum);
             
-            sum += arr[i];
-            
-            if(map.containsKey(sum)){
-                
-                int count = i - map.get(sum);
-                
-                if(count > ans ) ans = count;
-                
+            if(val!=null){
+                ans = Math.max(ans,i-val);
             }
             else
                 map.put(sum,i);
-            
-        }
-        
-        return ans;
+       }
+       
+       return ans;
         
         
     }
